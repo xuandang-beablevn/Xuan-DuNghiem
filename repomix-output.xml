@@ -40,6 +40,7 @@ The content is organized as follows:
 </file_summary>
 
 <directory_structure>
+.gitignore
 ATTRIBUTIONS.md
 default_shadcn_theme.css
 guidelines/Guidelines.md
@@ -158,6 +159,56 @@ vite.config.ts
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Cơ sở dữ liệu gói cài đặt (Dependencies)
+node_modules/
+.pnp
+.pnp.js
+
+# Thư mục chứa file sau khi Build dự án (Production)
+dist/
+dist-ssr/
+build/
+
+# Các file log ghi chú lỗi của hệ thống
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Các file chứa biến môi trường nhạy cảm (Environment variables)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Các thư mục bộ nhớ đệm (Cache)
+.vite/
+.eslintcache
+.stylelintcache
+
+# Rác hệ điều hành sinh ra (OS/IDE specific files)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cấu hình riêng của trình soạn thảo code (Editors/IDEs)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
 
 <file path="ATTRIBUTIONS.md">
 This Figma Make file includes components from [shadcn/ui](https://ui.shadcn.com/) used under [MIT license](https://github.com/shadcn-ui/ui/blob/main/LICENSE.md).
@@ -384,8 +435,6 @@ or initiating processes. They communicate interactivity and should have clear, a
     "dev": "vite"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "7.3.5",
@@ -424,14 +473,18 @@ or initiating processes. They communicate interactivity and should have clear, a
     "cmdk": "1.1.1",
     "date-fns": "3.6.0",
     "embla-carousel-react": "8.6.0",
+    "init": "^0.1.2",
     "input-otp": "1.4.2",
     "leaflet": "^1.9.4",
     "lucide-react": "0.487.0",
     "motion": "12.23.24",
     "next-themes": "0.4.6",
+    "ntl": "^5.1.0",
+    "react": "^18.3.1",
     "react-day-picker": "8.10.1",
     "react-dnd": "16.0.1",
     "react-dnd-html5-backend": "16.0.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "7.55.0",
     "react-leaflet": "^4.2.1",
     "react-popper": "2.3.0",
@@ -447,9 +500,9 @@ or initiating processes. They communicate interactivity and should have clear, a
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
-    "@vitejs/plugin-react": "4.7.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "4.7.0",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5"
   },
@@ -494,6 +547,7 @@ export default {}
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
+  "# Xuan-DuNghiem"
 </file>
 
 <file path="src/app/App.jsx">
@@ -7288,7 +7342,7 @@ export function JourneyPage() {
       {/* Biểu ngữ đầu trang dạng ảnh bìa lớn */}
       <div className="relative h-64 md:h-80 bg-gray-900 overflow-hidden">
         <SafeImage
-          src="/images/10.png"
+          src="/images/12.png"
           alt="Hành trình thủ công Nam Bộ"
           className="w-full h-full object-cover opacity-75 animate-in zoom-in-95 duration-700"
         />

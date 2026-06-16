@@ -15,7 +15,7 @@ export function JourneyPage() {
       {/* Biểu ngữ đầu trang dạng ảnh bìa lớn */}
       <div className="relative h-64 md:h-80 bg-gray-900 overflow-hidden">
         <SafeImage
-          src="/images/10.png"
+          src="/images/12.png"
           alt="Hành trình thủ công Nam Bộ"
           className="w-full h-full object-cover opacity-75 animate-in zoom-in-95 duration-700"
         />
