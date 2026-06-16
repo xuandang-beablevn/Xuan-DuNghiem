@@ -1,0 +1,93 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family: 'Be Vietnam Pro', sans-serif;
+
+  /* Pottery Brand Color Palette */
+  --dark-slate: #4f5e6c;        /* Màu chủ đạo của website */
+  --vermilion: #df643f;         /* Màu cam sáng dùng cho tag phân loại */
+  --terra-cotta: #bd461b;       /* Màu nhấn Cam đất Terracotta cho nút bấm quan trọng */
+  --deep-copper: #a5672a;       /* Màu phụ trợ cho điểm nhấn không gian */
+  --cream: #fefaf4;             /* Màu nền kem ấm áp, dễ chịu trên mắt di động */
+
+  --background: #fefaf4;
+  --foreground: #2c2c2c;
+  --card: #ffffff;
+  --card-foreground: #2c2c2c;
+  --popover: #ffffff;
+  --popover-foreground: #2c2c2c;
+  --primary: #4f5e6c;           /* Primary chuyển thành Dark Slate Gray */
+  --primary-foreground: #ffffff;
+  --secondary: #bd461b;         /* Secondary chuyển thành Cam đất Terracotta */
+  --secondary-foreground: #ffffff;
+  --muted: #e8e4dc;
+  --muted-foreground: #6b6b6b;
+  --accent: #bd461b;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: #fdfaf5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #4f5e6c;
+  --radius: 0.75rem;            /* Bo góc mềm mại hơn, tối ưu chạm vuốt di động */
+}
+
+@theme inline {
+  /* 1. Đăng ký Font Family mặc định cho hệ thống Tailwind v4 */
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+
+  /* 2. Đăng ký bộ màu sắc thương hiệu thành các class tiện ích chuẩn (bg-dark-slate, text-vermilion, bg-cream...) */
+  --color-dark-slate: var(--dark-slate);
+  --color-vermilion: var(--vermilion);
+  --color-terra-cotta: var(--terra-cotta);
+  --color-deep-copper: var(--deep-copper);
+  --color-cream: var(--cream);
+
+  /* Các biến màu cốt lõi ánh xạ cho các thành phần UI nền tảng */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --radius-lg: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-[var(--ring)];
+  }
+
+  body {
+    /* 3. Áp dụng font-sans (Be Vietnam Pro) làm font chủ đạo cho toàn thẻ body */
+    @apply bg-background text-foreground font-sans;
+    -webkit-tap-highlight-color: transparent; /* Tối ưu hóa trải nghiệm nhấp trên Safari Mobile */
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1a232c; /* Tăng độ tương phản hiển thị chữ sắc nét trên màn hình di động */
+  }
+}
