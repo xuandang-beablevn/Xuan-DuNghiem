@@ -60,15 +60,16 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             
+            {/* Đã cập nhật 4 địa điểm thành 2 địa điểm theo yêu cầu */}
             <div className="flex flex-col items-center p-3">
               <div className="p-3 bg-[var(--cream)] rounded-full text-[var(--terra-cotta)] mb-2.5">
                 <Compass className="h-5 w-5" />
               </div>
               <h3 className="text-base font-bold mb-1 text-gray-900">
-                {t("4 Địa Điểm Lớn", "4 Major Locations")}
+                {t("2 Địa Điểm Di Sản", "2 Heritage Locations")}
               </h3>
               <p className="text-xs text-gray-600 leading-relaxed max-w-xs">
-                {t("Bao quát các giá trị lịch sử, xưởng sản xuất và không gian nghệ thuật.", "Covering historical values, workshops, and art spaces.")}
+                {t("Bao quát không gian nghệ thuật Vườn Nhà Gốm và di tích Lò gốm Lái Thiêu cũ.", "Covering Vuon Nha Gom art space and the old Lai Thieu pottery kiln.")}
               </p>
             </div>
 
