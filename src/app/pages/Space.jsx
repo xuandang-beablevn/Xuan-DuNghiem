@@ -12,11 +12,11 @@ export function SpacePage() {
 
   return (
     <div className="min-h-screen bg-[var(--cream)] animate-in fade-in duration-300">
-      {/* Biểu ngữ đầu trang dạng ảnh bìa lớn áp dụng SafeImage bảo vệ - Sử dụng ảnh 12.png */}
+      {/* Biểu ngữ đầu trang dạng ảnh bìa lớn áp dụng SafeImage bảo vệ - Sử dụng ảnh 9.png */}
       <div className="relative h-64 md:h-80 bg-gray-900 overflow-hidden flex">
         <div className="absolute inset-0 w-full h-full z-0">
           <SafeImage
-            src="/images/12.png"
+            src="/images/9.png"
             alt="Không gian kiến trúc Vườn Nhà Gốm"
             className="w-full h-full object-cover opacity-75 animate-in zoom-in-95 duration-700"
           />
